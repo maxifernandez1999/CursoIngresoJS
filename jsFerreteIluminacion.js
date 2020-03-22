@@ -17,11 +17,12 @@ function CalcularPrecio ()
  	var marca;
  	var aumentoIIBB;
  	var totalPrecioLamparas;
- 	var precioFinalConDescuento;
+ 	
 
  	precioLamparas = 35
 
  	cantidadLamparas = document.getElementById("Cantidad").value;
+ 	marca = document.getElementById("Marca").value;
 
  	if(cantidadLamparas >= 6)
  	{
@@ -77,13 +78,12 @@ function CalcularPrecio ()
  					}
  			}
 
- 			if(precioFinalConDescuento > 120)
+ 			if(precioFinal > 120)
  			{
  				aumentoIIBB = precioFinal * 10 / 100;
- 				precioFinalConDescuento = precioFinal + aumentoIIBB;
+ 				precioFinal = precioFinal + aumentoIIBB;
  				alert("usted pago" + aumentoIIBB + "de IIBB");
  			}
 
- 			document.getElementById("precioDescuento").value = precioFinalConDescuento;
+ 			document.getElementById("precioDescuento").value = precioFinal;
 }
-/* no me sale punto E*/
